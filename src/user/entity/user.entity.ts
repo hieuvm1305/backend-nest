@@ -10,4 +10,21 @@ export class User {
 
   @Column({ unique: true })
   email: string;
+  @Column({ default: true })
+  is_user: boolean;
+
+  @Column({ default: false })
+  is_superuser: boolean;
+
+  @Column()
+  phone: string;
+
+  @Column({ unique: true })
+  username: string;
+
+  @Column()
+  password: string;
+
+  @Column({ type: 'timestamp', nullable: true })
+  logInAt: Date;
 }
